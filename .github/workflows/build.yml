@@ -17,14 +17,6 @@ jobs:
           submodules: recursive
           path: theos
 
-      - name: Checkout arichornlover/sdks
-        uses: actions/checkout@main
-        with:
-          repository: arichornlover/sdks
-          ref: main
-          sparse-checkout: iPhoneOS16.4.sdk
-          path: theos/sdks
-
       - name: Download iOS 16.4 SDK
         if: steps.SDK.outputs.cache-hit != 'true'
         run: |
