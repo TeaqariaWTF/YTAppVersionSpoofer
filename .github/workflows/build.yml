@@ -17,12 +17,12 @@ jobs:
           submodules: recursive
           path: theos
 
-      - name: Checkout arichornlover/sdks
+      - name: Checkout chrisharper22/sdks
         uses: actions/checkout@main
         with:
-          repository: arichornlover/sdks
+          repository: chrisharper22/sdks
           ref: main
-          sparse-checkout: iPhoneOS16.4.sdk
+          sparse-checkout: iPhoneOS16.2.sdk
           path: theos/sdks
 
       - name: Checkout PoomSmart/YouTubeHeader
